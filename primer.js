@@ -85,3 +85,17 @@ function identificarnumero() {// Funcion quinto ejercicio
 
 
 
+
+
+function buscarEnTexto() {// Funcion sexto ejercicio
+  let texto = document.getElementById("texto").value;
+  let buscar = document.getElementById("buscar").value;
+
+  let busqueda = texto.split(buscar).join("<mark>" + buscar + "</mark>");//Se utiliza la etiqueta mark para resaltan el texto o la palabra buscada
+
+  document.getElementById("busqueda").innerHTML = busqueda;
+
+}
+
+
+
