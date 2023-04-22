@@ -34,3 +34,24 @@ function verificarEdad() {// Funcion tercer ejercicio
     resultado.innerText = `Hola ${nombre}, no eres mayor de edad`;
   }
 }
+
+
+
+function calcularPromedio() {// Funcion cuarto ejercicio
+  const name = document.getElementById("name").value;
+  const materia = document.getElementById("materia").value;
+  const nota1 = parseFloat(document.getElementById("nota1").value);
+  const nota2 = parseFloat(document.getElementById("nota2").value);
+  const nota3 = parseFloat(document.getElementById("nota3").value);
+  const promedio = (nota1 + nota2 + nota3) / 3;
+  const promedioTotal = document.getElementById("promedioTotal");
+
+  if (promedio >= 3.0) {
+    promedioTotal.classList.add("aprobado");
+    promedioTotal.innerText = `Felicidades ${name}, Tu promedio es ${promedio} , aprobaste la materia ${materia}. .`;
+
+  } else {
+    promedioTotal.classList.add("reprobado");
+    promedioTotal.innerText = `Lo siento ${name},Tu promedio es ${promedio}, reprobaste la materia ${materia}. .`;
+  }
+}
