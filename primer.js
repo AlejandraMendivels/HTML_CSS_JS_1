@@ -20,3 +20,17 @@ function mostrarTipoDeDato() {//Funciones segundo ejercicio
     }//is Not a Number es la fncion isNaN
   }
 }
+
+function verificarEdad() {// Funcion tercer ejercicio
+  const nombre = document.getElementById("nombre").value;
+  const edad = parseInt(document.getElementById("edad").value);
+  const resultado = document.getElementById("resultado");
+
+  if (edad < 0 || isNaN(edad)) {
+    resultado.innerText = "No es una edad válida";
+  } else if (edad >= 18) {
+    resultado.innerText = `Hola ${nombre}, eres mayor de edad`;
+  } else {
+    resultado.innerText = `Hola ${nombre}, no eres mayor de edad`;
+  }
+}
