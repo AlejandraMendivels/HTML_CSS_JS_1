@@ -1,9 +1,9 @@
 function contarCaracteres() { // Funcion primer ejercicio
-    const textInput = document.getElementById('text-input');
-    const contar = document.getElementById('contar');
-    const count = textInput.value.length;// Se utiliza el length para obtener la cantidad de caracteres 
-    contar.innerText = `${count} caracteres`;//Aqui muestra los caracteres
-  }
+  const textInput = document.getElementById('text-input');
+  const contar = document.getElementById('contar');
+  const count = textInput.value.length;// Se utiliza el length para obtener la cantidad de caracteres 
+  contar.innerText = `${count} caracteres`;//Aqui muestra los caracteres
+}
 
 
 function mostrarTipoDeDato() {//Funciones segundo ejercicio
@@ -23,7 +23,7 @@ function mostrarTipoDeDato() {//Funciones segundo ejercicio
 
 function verificarEdad() {// Funcion tercer ejercicio
   const nombre = document.getElementById("nombre").value;
-  const edad = parseInt(document.getElementById("edad").value);
+  const edad = parseInt(document.getElementById("edad").value);//Se utiliza parseIn solo toma los enteros
   const resultado = document.getElementById("resultado");
 
   if (edad < 0 || isNaN(edad)) {
@@ -40,7 +40,7 @@ function verificarEdad() {// Funcion tercer ejercicio
 function calcularPromedio() {// Funcion cuarto ejercicio
   const name = document.getElementById("name").value;
   const materia = document.getElementById("materia").value;
-  const nota1 = parseFloat(document.getElementById("nota1").value);
+  const nota1 = parseFloat(document.getElementById("nota1").value);//Seutilisa parseFloat para que tome los los datos decimales
   const nota2 = parseFloat(document.getElementById("nota2").value);
   const nota3 = parseFloat(document.getElementById("nota3").value);
   const promedio = (nota1 + nota2 + nota3) / 3;
@@ -96,6 +96,58 @@ function buscarEnTexto() {// Funcion sexto ejercicio
   document.getElementById("busqueda").innerHTML = busqueda;
 
 }
+
+
+
+
+
+function divisionEntreNumeros() {// Funcion septimo ejercicio
+  const a = parseFloat(document.getElementById("a").value);
+  const b = parseFloat(document.getElementById("b").value);
+
+  const mensajes = document.getElementById("Mensajes");
+
+  if (a % b === 0) {
+    mensajes.innerText = `El número ${a} es divisible entre el número ${b}`;
+  } else if (b % a === 0) {
+    mensajes.innerText = `El número ${b} es divisible entre el número ${a}`;
+  } else {
+    mensajes.innerText = `El número ${a} no es divisible entre el número ${b}`;
+  }
+  if (a < 0) {
+    mensajes.innerText = `El número ${a} no es positivo`;
+  } if (b < 0) {
+    mensajes.innerText = `El número ${b} no es positivo`;
+
+  } if (a < 0 && b < 0) {
+    mensajes.innerText = `Los números ${a} y ${b} no son positivos`;
+
+  } else if (!Number.isInteger(a) || !Number.isInteger(b)) {
+
+    if (!Number.isInteger(a) > 0) {
+      mensajes.innerText = `El número ${a} no es entero`;
+    } if (!Number.isInteger(b) > 0) {
+      mensajes.innerText = `El número ${b} no es entero`;
+    } if (!Number.isInteger(a) > 0 && !Number.isInteger(b) > 0) {
+      mensajes.innerText = `Los números ${a} y ${b} no son enteros`;
+
+    }
+    if (!Number.isInteger(a) && a < 0 || !Number.isInteger(b) && b < 0) {
+      mensajes.innerText = `Los números ${a} y ${b} no son enteros positivos`;
+
+      if (!Number.isInteger(a) && a < 0) {
+        mensajes.innerText = `El número ${a} no es entero positivo`;
+      }
+      if (!Number.isInteger(b) && b < 0) {
+        mensajes.innerText = `El número ${b} no es entero positivo.`;
+      }
+    }
+
+  }
+}
+
+
+
 
 
 
