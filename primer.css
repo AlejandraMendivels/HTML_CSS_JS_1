@@ -1,0 +1,26 @@
+body {
+    font-family: 'Poppins', sans-serif;
+  
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    color: rgb(246, 33, 5);
+  }
+  
+  input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid rgb(190, 13, 13);
+    border-radius: 10px;
+  }
+  
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid rgb(243, 130, 130);
+  }
