@@ -147,6 +147,26 @@ function divisionEntreNumeros() {// Funcion septimo ejercicio
 }
 
 
+function obtenerNumeros() {// Funcion octavo ejercicio
+  const numeros = document.getElementById("numbers").value.split(",");//Se utiliza split para separar los datos y la coma para separarlos
+  const diferencia = document.getElementById("diferencia");
+  diferencia.innerHTML = "";
+
+  for (let num of numeros) {
+    num = parseFloat(num.trim()); //trim elimina los espacios en blanco
+
+    if (!Number.isInteger(num)) {
+      diferencia.innerHTML += `<div ><h2 style="color: red">${num} no es un número entero</div>`;
+    } else if (num % 2 === 0) {
+      diferencia.innerHTML += `<div ><h2 style="color: blue ">${num} es número par</div>`;
+
+    } else {
+      diferencia.innerHTML += `<div ><h2 style="color: green">${num} es número impar</div>`;
+    }
+  }
+}
+
+
 
 
 
