@@ -55,3 +55,33 @@ function calcularPromedio() {// Funcion cuarto ejercicio
     promedioTotal.innerText = `Lo siento ${name},Tu promedio es ${promedio}, reprobaste la materia ${materia}. .`;
   }
 }
+
+
+
+
+
+
+function identificarnumero() {// Funcion quinto ejercicio
+  const number = parseFloat(document.getElementById("numero").value);
+  const salida = document.getElementById("salida");
+  if (isNaN(number)) {
+    salida.innerText = "Debes ingresar un número.";
+  }
+  else if (!Number.isInteger(number)) {
+    if (number > 0) {
+      salida.innerText = "Debes ingresar números enteros";
+    } else {
+      salida.innerText = "Debes ingresar números enteros positivos";
+    }
+  } else if (number < 0) {
+    salida.innerText = "Debes ingresar números positivos.";
+
+  } else if (number % 2 === 0) {
+    salida.innerText = "Es un número par.";
+  } else {
+    salida.innerText = "Es un número  impar.";
+  }
+}
+
+
+

@@ -68,7 +68,7 @@
   <section>
     <div>
       <h1>Calificación de materias</h1>
-
+      <h3>Ingresa los datos en cada uno de los campos y te dira si pasaste o no la materia y su correspondiente promedio </h3>
       <label>
         Nombre:
         <input type="text" id="name" required>
@@ -90,10 +90,31 @@
         Nota 3:
         <input type="number" id="nota3" required>
       </label>
-      <button class="boton-ejercicio4" id="boton-ejercicio4" onclick="calcularPromedio()">Calcular promedio</button>
+      <button class="boton-ejercicio4" id="boton-ejercicio4" 
+      onclick="calcularPromedio()">Calcular promedio</button>
       <p id="promedioTotal"></p>
 
     </div>
   </section>
   <hr>
   <script src="primer.js"></script>
+
+  
+
+
+  
+<section>
+  <div>
+  <h1>Identificador de numeros pares e impares</h1>
+  <div>
+    <label for="numero">Ingresa un número entero positivo: </label>
+    <input type="number" id="numero" name="numero">
+    <button onclick="identificarnumero()">Identificar</button>
+    <p id="salida"></p>
+  </div>
+</section>
+  <script src="primer.js"></script>
+  <hr>
+    
+
+
