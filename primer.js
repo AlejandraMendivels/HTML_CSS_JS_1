@@ -28,7 +28,9 @@ function verificarEdad() {// Funcion tercer ejercicio
 
   if (edad < 0 || isNaN(edad)) {
     resultado.innerText = "No es una edad válida";
-  } else if (edad >= 18) {
+  } else if (edad == 0) {
+    resultado.innerText = "No es una edad válida";
+  }else if (edad >= 18) {
     resultado.innerText = `Hola ${nombre}, eres mayor de edad`;
   } else {
     resultado.innerText = `Hola ${nombre}, no eres mayor de edad`;
@@ -43,19 +45,18 @@ function calcularPromedio() {// Funcion cuarto ejercicio
   const nota1 = parseFloat(document.getElementById("nota1").value);//Seutilisa parseFloat para que tome los los datos decimales
   const nota2 = parseFloat(document.getElementById("nota2").value);
   const nota3 = parseFloat(document.getElementById("nota3").value);
-  const promedio = (nota1 + nota2 + nota3) / 3;
+  const promedio = (nota1 + nota2 + nota3) / 3 ;
   const promedioTotal = document.getElementById("promedioTotal");
+  promedioTotal.innerHTML = "";
 
   if (promedio >= 3.0) {
-    promedioTotal.classList.add("aprobado");
-    promedioTotal.innerText = `Felicidades ${name}, Tu promedio es ${promedio} , aprobaste la materia ${materia}. .`;
+    promedioTotal.innerHTML += `Felicidades ${name}, Tu promedio es <span style="color:green">${promedio.toFixed(2)}</span>, aprobaste la materia </span>${materia}`;//Utlizo .toFixed(3) para imprimir el numero  de decimales a imprimir , sin esa funcion imprime todos los decimales,  la etiqueta span solo para tomar el color en promedio
 
   } else {
-    promedioTotal.classList.add("reprobado");
-    promedioTotal.innerText = `Lo siento ${name},Tu promedio es ${promedio}, reprobaste la materia ${materia}. .`;
+    promedioTotal.innerHTML += `Lo siento ${name}, Tu promedio es <span style="color:red">${promedio.toFixed(2)}</span>, reprobaste la materia ${materia}`;
   }
-}
 
+}
 
 
 

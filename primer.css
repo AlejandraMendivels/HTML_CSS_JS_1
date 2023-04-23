@@ -38,7 +38,13 @@ body {
     cursor: pointer;
   }
   
-
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
 mark{
   background-color: red;
 }
